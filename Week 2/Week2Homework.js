@@ -1,6 +1,8 @@
 const pizzaPlace = "Lee's Pizzeria Party";
 const numberOfToppings = "80 Toppings";
 
+console.log(typeof {pizzaPlace});
+console.log(typeof {numberOfToppings});
 console.log(pizzaPlace + " with " + numberOfToppings);
 
 const customer = "Freddy";
