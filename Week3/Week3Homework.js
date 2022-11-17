@@ -1,33 +1,62 @@
-
-const pizzaToppings = ["sausage", " mushrooms", " peppers", " cheese"];
+const pizzaToppings = ["sausage", "mushrooms", "peppers", "cheese"];
 
 function greetCustomer() {
-    console.log(`Hi. Welcome to the Pizza Place. Our toppings are ${pizzaToppings}`)
+    let varny = "Hi. Welcome to the Pizza Place. Our toppings are ";
+    for (let topping of pizzaToppings) {
+        varny += ` ${topping},`;
+        // console.log(topping);
+    }
+    console.log(varny)
 }
-return greetCustomer();
+greetCustomer();
+
+// const cheeses = ["cheddar", 2, true, "parma"]
+// for (let chim of cheeses) {
+    // console.log(chim);
+// }
 
 
-function getPizzaOrder(size = "12 inches", crust = "Whole Wheat", ...toppings = pizzaToppings) {
-    console.log(`One large thick crust pizza with ${size}, ${crust}, and ${toppings} coming up!`)
+
+
+
+function getPizzaOrder(size, crust, ...toppings) {
+    let varny = `One ${size} ${crust} crust pizza with `;
+    for (let topping of toppings) {
+        varny += ` ${topping},`;
+        // console.log(topping);
+    }
+    varny += " coming up!";
+    console.log(varny);
+    return [size, crust, toppings];
+
 }
-return getPizzaOrder();
+// getPizzaOrder("12 inch", "Wheat", "sausage", "bacon" );
+// console.log(output);
+
+function preparePizza([size, crust, toppings]) {
+    console.log("Now cooking pizza")
+    return {
+      size: size,
+      crust: crust,
+      toppings: toppings
+    }
+}
+// preparePizza(getPizzaOrder("12 inch", "Wheat", "sausage", "bacon" ));
 
 
-function preparePizza()
-const pizza = [
-    { size: "12 inches"}, 
-    { crust: "Whole Wheat"},
-    {...toppings = pizzaToppings}, 
-
-    console.log("Now cooking pizza[pizza.crust]")
-    
-];
-return preparePizza;
-
-function servePizza() {
-    console.log(`Order up! Here's your ${pizza.size}, ${pizza.crust} crust pizza with ${pizza.toppings}`)
-};
-return servePizza;
+function servePizza(pizza) {
+    let varny = `Order up! Here's your ${pizza.size} ${pizza.crust} crust pizza with `;
+    for (let topping of pizza.toppings) {
+        varny += ` ${topping},`;
+        // console.log(topping);
+    }
+    varny += " Enjoy!";
+    console.log(varny);
+    return pizza
+}
+servePizza(preparePizza(getPizzaOrder("12 inch", "Wheat", "sausage", "bacon" )));
 
 
-return preparePizza(greetCustomer(getPizzaOrder(servePizza)));
+let output1 = getPizzaOrder("12 inch", "Wheat", "sausage", "bacon" );
+let output2 = preparePizza(output1);
+let output3 = servePizza(output2);
