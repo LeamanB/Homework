@@ -1,0 +1,28 @@
+
+html {
+    font-family: 'Space Mono', monospace;
+    }
+
+body {
+    background: #81B29A;
+}
+
+* {
+    border: 1px solid black;
+}
+
+.header {
+    color: #81B29A;
+    font-size: 100px
+}
+
+h1 {
+    color: #81B29A;
+}
+
+
+div {
+    padding: 20px;
+    margin: 50px 50px 100px 100px;
+    border: 10px;
+}
