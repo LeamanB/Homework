@@ -1,0 +1,57 @@
+html {
+  background-color: antiquewhite;
+}
+
+body {
+  text-align: center;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+img {
+  height: 100%;
+}
+
+div {
+  border: 2px solid burlywood;
+  margin: 5px;
+}
+
+#introPic {
+  float: left;
+}
+
+#bio {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items:flex-end;
+}
+
+#bio > li {
+  padding: 2px;
+}
+
+#pro {
+  width: auto;
+
+}
+
+
+@media (max-width: 900px) {
+  img {
+    width: 50%;
+    height: 50%;
+    justify-content:center;
+  }
+  div {
+    text-align: center;
+  }
+  link {
+    text-align: center
+  }
+}
+
+
