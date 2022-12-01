@@ -608,14 +608,8 @@ let use5 = pd.filter(function(five) {
 console.log(use5);
 
 
-const newArray = [];
-function coord (use5) {
-    newArray.push(use5.title);
-    newArray.push(use5.body); 
-}
-
-pd.forEach((thing2) => coord(thing2));
-console.log(newArray);
+let Array2 = pd.map((thing2) => [thing2.title, thing2.body])
+console.log(Array2);
 
 
 // filter is just to filter out what you want - "Get me every student that is under 18" You can't get the age of every student.
