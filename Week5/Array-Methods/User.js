@@ -1,5 +1,3 @@
-const { arrayBuffer } = require("stream/consumers");
-
 let allofthis = [
   {
     "id": 1,
@@ -233,18 +231,13 @@ let allofthis = [
   }
 ]
 
-let phonenum = allofthis.filter(function (currentElement) {
-  return currentElement = "phone";
-});
+allofthis.forEach(stuff1 => console.log(stuff1.phone));
 
-console.log(phonenum);
+const newArray = [];
+function coord (thing) {
+    newArray.push(thing.website);
+    newArray.push(thing.email); 
+}
 
-let emailwebsite = allofthis.map((val, i, arr) => {
-  return {
-    website: "website",
-    email: "email",
-  };
-});
-
-console.log(emailwebsite);
-
+allofthis.forEach((thing2) => coord(thing2));
+console.log(newArray);
