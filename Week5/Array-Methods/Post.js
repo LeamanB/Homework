@@ -601,19 +601,23 @@ pd = [
   }
 ]
 
-
-let pd = ToDo.filter(function (currentElement) {
-  return currentElement = "userId"
-  return currentElement = 5
-});
-console.log(pd);
-
-
-let emailwebsite = allofthis.map((val, i, arr) => {
-  return {
-    title: title,
-    body: body,
-  };
+let use5 = pd.filter(function(five) {
+  return five.userId == 5;
 });
 
-console.log(emailwebsite);
+console.log(use5);
+
+
+const newArray = [];
+function coord (use5) {
+    newArray.push(use5.title);
+    newArray.push(use5.body); 
+}
+
+pd.forEach((thing2) => coord(thing2));
+console.log(newArray);
+
+
+// filter is just to filter out what you want - "Get me every student that is under 18" You can't get the age of every student.
+// map applies function to each item. "Take item 1 and put it in a function. Take item 2 and put it in this function. etc"
+// You can put both into a function to get a new output

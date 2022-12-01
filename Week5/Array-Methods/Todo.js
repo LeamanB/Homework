@@ -1201,14 +1201,17 @@ ToDo = [
   }
 ]
 
-let use9 = ToDo.filter(function (currentElement) {
-  return currentElement = "UserID"
-  return currentElement = 9
-});
-console.log(use9);
 
 
-let incomp = use9.filter(function (incomplete) {
-  return incomplete.completed == false;
+let use9 = ToDo.filter(function(nine) {
+  return nine.userId == 9;
 });
-console.log(incomp);
+
+
+const newArray = [];
+function coord (use9) {
+    return use9.completed == false; 
+}
+
+use9.forEach((thing2) => coord(thing2));
+console.log(newArray);
