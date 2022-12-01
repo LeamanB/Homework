@@ -1,4 +1,4 @@
-let allofthis = [
+let Userlist = [
   {
     "id": 1,
     "name": "Leanne Graham",
@@ -231,13 +231,18 @@ let allofthis = [
   }
 ]
 
-allofthis.forEach(stuff1 => console.log(stuff1.phone));
+Userlist.forEach(stuff1 => console.log(stuff1.phone));
+let webemail = [];
 
-const newArray = [];
-function coord (thing) {
-    newArray.push(thing.website);
-    newArray.push(thing.email); 
-}
+Userlist.forEach(person => webemail.push([person.website, person.email]));
+console.log(webemail);
 
-allofthis.forEach((thing2) => coord(thing2));
-console.log(newArray);
+// let newArray = [];
+// function coord (thing) {
+//     newArray.push(thing.website);
+//     newArray.push(thing.email); 
+// }
+
+// Userlist.forEach((thing2) => coord(thing2));
+// console.log(newArray);
+

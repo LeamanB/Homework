@@ -1206,12 +1206,11 @@ ToDo = [
 let use9 = ToDo.filter(function(nine) {
   return nine.userId == 9;
 });
+console.log(use9);
 
-
-const newArray = [];
 function coord (use9) {
     return use9.completed == false; 
 }
 
-use9.forEach((thing2) => coord(thing2));
-console.log(newArray);
+const newArray = use9.filter((thing2) => coord(thing2));
+console.log(newArray.length);
